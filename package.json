@@ -1,0 +1,11 @@
+{
+  "name": "certaforge-contract",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "deploy:studionet": "node scripts/deploy.mjs"
+  },
+  "dependencies": {
+    "genlayer-js": "^1.1.8"
+  }
+}

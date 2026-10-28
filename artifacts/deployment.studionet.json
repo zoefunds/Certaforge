@@ -1,0 +1,19 @@
+{
+  "schema": "certaforge.deployment/v1",
+  "network": "GenLayer Studionet",
+  "chainId": 61999,
+  "source": "contracts/certaforge.py",
+  "sourceSha256": "aa1255c639da0939bdcabaaf8c6030017f5891111ab57e072e959bf9eb3a0981",
+  "deployedSourceSha256": "aa1255c639da0939bdcabaaf8c6030017f5891111ab57e072e959bf9eb3a0981",
+  "sourceBytes": 45552,
+  "sourceEquivalent": true,
+  "deployer": "0x9e75694e204B03997D55B5A664a924aDaE3F43D1",
+  "startedAt": "2026-10-28T07:58:42.954Z",
+  "finalizedAt": "2026-10-28T07:59:25.397Z",
+  "txHash": "0xb03e901899283a0963fcaf77f05503780bc719b20a9fee6671b6b3e0264f4e05",
+  "contractAddress": "0x7C20CF9737F69480Ad7C22c4cF6f5F5574f4e204",
+  "consensus": "MAJORITY_AGREE",
+  "execution": "FINALIZED_WITH_EXECUTION_HASH",
+  "txExecutionHash": "0xc6b7b8521d91486ccf11491e4ac825253ff8cad877c600d9c45236efd6e34e04",
+  "transactionStatus": "FINALIZED"
+}
