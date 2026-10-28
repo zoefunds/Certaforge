@@ -21,12 +21,14 @@ whose contract class is `CertaForge`.
 | Transaction status | `FINALIZED` |
 | Source SHA-256 | `aa1255c639da0939bdcabaaf8c6030017f5891111ab57e072e959bf9eb3a0981` |
 | Source equivalence | Local and deployed source hashes match |
-| Latest verification | 60 tests passed; GenVM lint passed |
+| Latest verification | 60 tests passed; GenVM lint passed; live funded E2E accepted |
 
 - [View the deployment transaction](https://explorer-studio.genlayer.com/tx/0xb03e901899283a0963fcaf77f05503780bc719b20a9fee6671b6b3e0264f4e05)
 - [Deployment procedure and evidence](docs/DEPLOYMENT.md)
 - [Verification status](docs/VERIFICATION.md)
+- [Live Studionet E2E report](docs/E2E.md)
 - [Machine-readable deployment record](artifacts/deployment.studionet.json)
+- [Machine-readable live E2E record](artifacts/live-e2e.studionet.json)
 
 ## Contract lifecycle
 
@@ -78,5 +80,8 @@ with the local source, and writes `artifacts/deployment.studionet.json`.
 - `tests/test_source_guards.py` — protocol invariant guards.
 - `tests/test_identity.py` — project identity guard.
 - `scripts/deploy.mjs` — verified Studionet deployment workflow.
+- `scripts/e2e_studionet.mjs` — complete funded live lifecycle runner.
+- `scripts/verify_e2e.mjs` — independent live evidence re-verifier.
 - `artifacts/deployment.studionet.json` — finalized deployment evidence.
+- `artifacts/live-e2e.studionet.json` — finalized funded lifecycle evidence.
 - `docs/` — deployment and verification documentation.

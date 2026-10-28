@@ -13,6 +13,9 @@ on 28 October 2026:
 | Studionet deployment finalization | `FINALIZED` |
 | Studionet validator consensus | `MAJORITY_AGREE` |
 | Local/deployed source equivalence | `passed` |
+| Live funded Studionet lifecycle | `ACCEPTED` |
+| Live E2E coverage | `[1, 1, 1, 1, 0, 0]`, zero blockers |
+| Live E2E transactions | `13 finalized`, all `MAJORITY_AGREE` |
 
 ## Coverage
 
@@ -43,3 +46,7 @@ The on-chain source-equivalence result is independently recorded in
 `artifacts/deployment.studionet.json`. A later source change invalidates the
 current deployment equivalence and requires a fresh deployment before these
 documents may describe the changed source as deployed.
+
+The detailed funded lifecycle and every explorer-linked transaction are in
+`docs/E2E.md`; the complete machine-readable record is in
+`artifacts/live-e2e.studionet.json`.

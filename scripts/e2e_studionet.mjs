@@ -8,6 +8,12 @@ const contractAddress = process.env.CERTAFORGE_CONTRACT_ADDRESS;
 const signerKey = process.env.CERTAFORGE_E2E_KEY;
 const commit = process.env.CERTAFORGE_E2E_COMMIT;
 const baseline = process.env.CERTAFORGE_E2E_BASELINE;
+const repository = process.env.CERTAFORGE_E2E_REPOSITORY || "zoefunds/Certaforge";
+const ref = process.env.CERTAFORGE_E2E_REF || "main";
+const scopePath = process.env.CERTAFORGE_E2E_SCOPE || "scripts/deploy.mjs";
+const obligation = process.env.CERTAFORGE_E2E_OBLIGATION ||
+  "The deployment workflow requires finalized majority consensus and verifies byte-for-byte equality between local and deployed contract source.";
+const requiredCheckName = process.env.CERTAFORGE_E2E_REQUIRED_CHECK || "tests";
 if (!contractAddress || !signerKey || !commit || !baseline) {
   throw new Error("contract address, signer key, commit, and baseline are required");
 }
@@ -95,15 +101,13 @@ const signer = writer.account.address;
 const balanceBefore = await nativeBalance(signer);
 const nextBefore = Number(await call("get_next_id"));
 const sealBy = Math.floor(Date.now() / 1000) + 420;
-const obligations = [
-  "The deployment workflow requires finalized majority consensus and verifies byte-for-byte equality between local and deployed contract source.",
-];
-const scope = ["scripts/deploy.mjs"];
-const requiredChecks = [{ name: "tests", app_slug: "github-actions" }];
+const obligations = [obligation];
+const scope = [scopePath];
+const requiredChecks = [{ name: requiredCheckName, app_slug: "github-actions" }];
 
 await write("open release", "open_release", [
-  "zoefunds/Certaforge",
-  "main",
+  repository,
+  ref,
   baseline,
   signer,
   "Verified CertaForge Studionet deployment workflow",
@@ -172,7 +176,7 @@ const report = {
   contractAddress,
   deploymentTransaction: deployment.txHash,
   deployedSourceSha256: deployment.deployedSourceSha256,
-  repository: "https://github.com/zoefunds/Certaforge",
+  repository: `https://github.com/${repository}`,
   baseline,
   commit,
   signer,

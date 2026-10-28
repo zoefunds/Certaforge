@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "deploy:studionet": "node scripts/deploy.mjs",
-    "e2e:studionet": "node scripts/e2e_studionet.mjs"
+    "e2e:studionet": "node scripts/e2e_studionet.mjs",
+    "verify:e2e": "node scripts/verify_e2e.mjs"
   },
   "dependencies": {
     "genlayer-js": "^1.1.8"

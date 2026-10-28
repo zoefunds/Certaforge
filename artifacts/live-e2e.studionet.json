@@ -1,0 +1,267 @@
+{
+  "schema": "certaforge.live-e2e/v1",
+  "network": "GenLayer Studionet",
+  "chainId": 61999,
+  "contractAddress": "0x7C20CF9737F69480Ad7C22c4cF6f5F5574f4e204",
+  "deploymentTransaction": "0xb03e901899283a0963fcaf77f05503780bc719b20a9fee6671b6b3e0264f4e05",
+  "deployedSourceSha256": "aa1255c639da0939bdcabaaf8c6030017f5891111ab57e072e959bf9eb3a0981",
+  "repository": "https://github.com/actions/checkout",
+  "baseline": "12cd2235efa0937479335606d7c3ac9f6c0973b1",
+  "commit": "28802689a136bfcdb721715abd713740beecbe07",
+  "signer": "0x9e75694e204B03997D55B5A664a924aDaE3F43D1",
+  "releaseId": 1,
+  "title": "Verified CertaForge Studionet deployment workflow",
+  "obligations": [
+    "The action manifest defines a deterministic GitHub repository checkout interface with explicit inputs and a declared Node runtime."
+  ],
+  "scope": [
+    "action.yml"
+  ],
+  "requiredChecks": [
+    {
+      "name": "build",
+      "app_slug": "github-actions"
+    }
+  ],
+  "sealBy": 1793175485,
+  "seal": {
+    "baseline_tree": "d0951ccc59e9128cfbf2cfebee8fefe2db459008",
+    "change_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "changes": [],
+    "check_total": 11,
+    "commit": "28802689a136bfcdb721715abd713740beecbe07",
+    "observed_ref_head": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+    "runtime_checks": [
+      {
+        "app_slug": "github-actions",
+        "conclusion": "success",
+        "name": "Analyze (javascript)",
+        "status": "completed",
+        "url": "https://github.com/actions/checkout/actions/runs/29601218510/job/87953521763"
+      },
+      {
+        "app_slug": "github-actions",
+        "conclusion": "success",
+        "name": "Check licenses",
+        "status": "completed",
+        "url": "https://github.com/actions/checkout/actions/runs/29601218474/job/87953521782"
+      },
+      {
+        "app_slug": "github-actions",
+        "conclusion": "success",
+        "name": "build",
+        "status": "completed",
+        "url": "https://github.com/actions/checkout/actions/runs/29601218515/job/87953522284"
+      },
+      {
+        "app_slug": "github-actions",
+        "conclusion": "success",
+        "name": "check-dist",
+        "status": "completed",
+        "url": "https://github.com/actions/checkout/actions/runs/29601218493/job/87953521908"
+      },
+      {
+        "app_slug": "github-actions",
+        "conclusion": "success",
+        "name": "test (macos-latest)",
+        "status": "completed",
+        "url": "https://github.com/actions/checkout/actions/runs/29601218515/job/87953522267"
+      },
+      {
+        "app_slug": "github-actions",
+        "conclusion": "success",
+        "name": "test (ubuntu-latest)",
+        "status": "completed",
+        "url": "https://github.com/actions/checkout/actions/runs/29601218515/job/87953522279"
+      },
+      {
+        "app_slug": "github-actions",
+        "conclusion": "success",
+        "name": "test (windows-latest)",
+        "status": "completed",
+        "url": "https://github.com/actions/checkout/actions/runs/29601218515/job/87953522382"
+      },
+      {
+        "app_slug": "github-actions",
+        "conclusion": "success",
+        "name": "test-bypass-proxy",
+        "status": "completed",
+        "url": "https://github.com/actions/checkout/actions/runs/29601218515/job/87953522342"
+      },
+      {
+        "app_slug": "github-actions",
+        "conclusion": "success",
+        "name": "test-git-container",
+        "status": "completed",
+        "url": "https://github.com/actions/checkout/actions/runs/29601218515/job/87953522317"
+      },
+      {
+        "app_slug": "github-actions",
+        "conclusion": "success",
+        "name": "test-output",
+        "status": "completed",
+        "url": "https://github.com/actions/checkout/actions/runs/29601218515/job/87953522295"
+      },
+      {
+        "app_slug": "github-actions",
+        "conclusion": "success",
+        "name": "test-proxy",
+        "status": "completed",
+        "url": "https://github.com/actions/checkout/actions/runs/29601218515/job/87953522315"
+      }
+    ],
+    "runtime_policy_root": "d92b8a744f73efdb61c22118f11871be315d63cfd66e388ced7abaf46f79b48f",
+    "runtime_root": "4a13f23f1dee23c3e1a340ae493f09d4aaf3f832845c7f3b35bae88024491968",
+    "runtime_state": "PASS",
+    "tree": "7e2412104c78b12cdd45ffabd152b7219bc1e701"
+  },
+  "certificate": {
+    "agreement_root": "39fad528860295c6c27bf283989279f377b168841b461afd7bec3c464bfd28a0",
+    "assessment_root": "720ea8c8d5ea8f983942321cbb3ca675b2f3af8bd297da84f5121382fd438cfd",
+    "blockers": [],
+    "coverage": [
+      1,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    "edge_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "inventory_root": "204880a8c721842330db8e1c421b58b88c5bc71e58ccf3e830afa2a0ff342827",
+    "obligation_root": "a5c862baa2f2c183f990f0ae7b47b10c05df5be0477032d9a9af4efc9b4af9fe",
+    "outcome": "ACCEPTED",
+    "seal_root": "cf700dfb33615f13a291601578a5a2a51b4c12deadfb0006f005f9075e4a0fc5"
+  },
+  "terminalState": "ACCEPTED",
+  "escrowWei": "1000000000000000000",
+  "creditedBeforeWithdrawWei": "1000000000000000000",
+  "contractCreditAfterWithdrawWei": "0",
+  "fundingCreditAfterWithdrawWei": "0",
+  "signerNativeBalance": {
+    "beforeWei": "3000000000000000000",
+    "afterWei": "3000000000000000000",
+    "deltaWei": "0"
+  },
+  "nextId": {
+    "before": 1,
+    "after": 2
+  },
+  "coverage": [
+    1,
+    1,
+    1,
+    1,
+    0,
+    0
+  ],
+  "blockers": [],
+  "transactions": [
+    {
+      "label": "open release",
+      "hash": "0x8a16d6a81b338ac0f4af4314d57a1b5a8b04a0abc948426459da8f9f79ff6a6d",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "FINALIZED_WITH_EXECUTION_HASH",
+      "executionHash": "0x80cc72a5cc7226791b86604822b5c42f36043a80ee98662eef94c1f3ee517ca3",
+      "finalizedAt": "2026-10-28T08:11:45.375Z"
+    },
+    {
+      "label": "deposit escrow funding",
+      "hash": "0x8701cee1c4d1cc58cc44fafea4f1363d191e5de9d885a9fe7447159ee168cd47",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "FINALIZED_WITH_EXECUTION_HASH",
+      "executionHash": "0x79f5c60bae097712a220511da2a71ab3e060bd547de74bb90a091921c5598abc",
+      "finalizedAt": "2026-10-28T08:12:25.572Z"
+    },
+    {
+      "label": "allocate sponsor escrow",
+      "hash": "0x7f5acd7b3af15cdc2c6f182b01ea8edd70eaacf3fc3db0664b59969ecf11093d",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "FINALIZED_WITH_EXECUTION_HASH",
+      "executionHash": "0x6db2aa1acceda7c1c9768190f8037a3bb7861874d9aa02258fd9933c56cf9a7b",
+      "finalizedAt": "2026-10-28T08:13:05.359Z"
+    },
+    {
+      "label": "seal GitHub release",
+      "hash": "0xd3032812d7100f77c75422d977bfa2b159dc10931c9b056fe1a51bbfb0fe6787",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "FINALIZED_WITH_EXECUTION_HASH",
+      "executionHash": "0x79f5c60bae097712a220511da2a71ab3e060bd547de74bb90a091921c5598abc",
+      "finalizedAt": "2026-10-28T08:13:56.335Z"
+    },
+    {
+      "label": "begin sealed inventory",
+      "hash": "0x2b8159a7a66e1843e0fa35aa2faef8fab1493d930a446ee556a9b1f24bdee2f0",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "FINALIZED_WITH_EXECUTION_HASH",
+      "executionHash": "0x78ed384b0413a29130843ce292bb74ceab136319f07fa5c1ecb824994655364f",
+      "finalizedAt": "2026-10-28T08:18:50.521Z"
+    },
+    {
+      "label": "discover complete inventory",
+      "hash": "0x48fa4f825bf683bf893598681b5814cbb66757a6609816c9f61f8ebff5ed10fe",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "FINALIZED_WITH_EXECUTION_HASH",
+      "executionHash": "0x06c60c3cb932c62c0f6e13ffc7ec90d30b568662cecfa69839996d8ccb5c9c7e",
+      "finalizedAt": "2026-10-28T08:19:36.079Z"
+    },
+    {
+      "label": "close inventory",
+      "hash": "0xe27b41d9d611d11f34b64b1bad6ac59462d3b1d8667f7e7c3a6b1c21a0afd7f0",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "FINALIZED_WITH_EXECUTION_HASH",
+      "executionHash": "0xf0d9eb2b5882b0e23b730054be4c5cd7e91f822dae0137cbf4a3f7175b3634d8",
+      "finalizedAt": "2026-10-28T08:20:15.924Z"
+    },
+    {
+      "label": "materialize inventory entry 0",
+      "hash": "0x77e4aa57694812676d0583d271f5b3c4be5c6250bdf502dda2a618834f4afd12",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "FINALIZED_WITH_EXECUTION_HASH",
+      "executionHash": "0x80cc72a5cc7226791b86604822b5c42f36043a80ee98662eef94c1f3ee517ca3",
+      "finalizedAt": "2026-10-28T08:21:02.383Z"
+    },
+    {
+      "label": "build dependency review graph",
+      "hash": "0x1438468e2f6e64507df4c6a7663fdcddf221e5162157a54d20eea8d34dd13a10",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "FINALIZED_WITH_EXECUTION_HASH",
+      "executionHash": "0x78ed384b0413a29130843ce292bb74ceab136319f07fa5c1ecb824994655364f",
+      "finalizedAt": "2026-10-28T08:21:42.044Z"
+    },
+    {
+      "label": "assess component 0",
+      "hash": "0xd2f5760b9b0233509a5f046de1ed49c66f00afae904260e04b0e271a65f85c60",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "FINALIZED_WITH_EXECUTION_HASH",
+      "executionHash": "0x2c95f8274d40632642bfc47a6581d1861e15e0e9faf45725a84044d418635ab0",
+      "finalizedAt": "2026-10-28T08:22:35.403Z"
+    },
+    {
+      "label": "propose certificate",
+      "hash": "0x81842eb5aa4fe139db097b0b7a2ee6be1935955ad408df97c745425eb020686b",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "FINALIZED_WITH_EXECUTION_HASH",
+      "executionHash": "0x4370e588fffa85704858a9ebbe78bf821af8026c35d9f36919a3c83f634f4e32",
+      "finalizedAt": "2026-10-28T08:23:15.099Z"
+    },
+    {
+      "label": "finalize accepted certificate",
+      "hash": "0x3870c84bfa4628ada757b2ed6ba597e467df9035beacb1b2753165fcfa999d1d",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "FINALIZED_WITH_EXECUTION_HASH",
+      "executionHash": "0x80cc72a5cc7226791b86604822b5c42f36043a80ee98662eef94c1f3ee517ca3",
+      "finalizedAt": "2026-10-28T08:43:21.328Z"
+    },
+    {
+      "label": "withdraw settled escrow",
+      "hash": "0xadf320482783858beedc20fbc94c9f88356476e18f4e486dba17ea1e625ecd19",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "FINALIZED_WITH_EXECUTION_HASH",
+      "executionHash": "0x4bd7fede65519caf27f42bdea2cb9a41c0756eb99619b6002062677d69ff6023",
+      "finalizedAt": "2026-10-28T08:44:02.435Z"
+    }
+  ],
+  "startedAt": "2026-10-28T08:11:02.348Z",
+  "completedAt": "2026-10-28T08:44:08.097Z"
+}
