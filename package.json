@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "deploy:studionet": "node scripts/deploy.mjs"
+    "deploy:studionet": "node scripts/deploy.mjs",
+    "e2e:studionet": "node scripts/e2e_studionet.mjs"
   },
   "dependencies": {
     "genlayer-js": "^1.1.8"
