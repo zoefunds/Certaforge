@@ -23,6 +23,27 @@ The matching hashes prove that the finalized transaction contains the exact
 UTF-8 bytes from `contracts/certaforge.py`. The complete machine-readable record
 is in `artifacts/deployment.studionet.json`.
 
+## Post-deployment live validation
+
+The current deployment subsequently completed a full funded lifecycle as
+release `1`:
+
+| Field | Verified value |
+| --- | --- |
+| Escrow | 1 GEN |
+| Certificate | `ACCEPTED` |
+| Terminal state | `ACCEPTED` |
+| Coverage | `[1, 1, 1, 1, 0, 0]` |
+| Blockers | none |
+| Finalized transactions | 13, all `MAJORITY_AGREE` |
+| Contract credit after withdrawal | `0` |
+| Funding credit after withdrawal | `0` |
+
+The human-readable record is in `docs/E2E.md`; the complete transaction and
+certificate data is in `artifacts/live-e2e.studionet.json`. The read-only
+`npm run verify:e2e` command independently re-fetches the finalized transactions
+and current release state from Studionet.
+
 ## Reproducible deployment procedure
 
 1. Run the complete local verification commands documented in `README.md`.
@@ -34,6 +55,9 @@ is in `artifacts/deployment.studionet.json`.
 6. Confirm that `sourceEquivalent` is `true` in the generated artifact.
 7. Review and commit the deployment artifact without committing signing
    material or local dependency directories.
+8. Execute the funded lifecycle runner against an eligible green GitHub release,
+   wait through its real protocol windows, and run `npm run verify:e2e` before
+   publishing the evidence artifact.
 
 Each deployment creates a new contract address. When replacing the current
 deployment, update the README, this document, and the machine-readable artifact

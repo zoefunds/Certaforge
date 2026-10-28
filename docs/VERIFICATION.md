@@ -16,6 +16,9 @@ on 28 October 2026:
 | Live funded Studionet lifecycle | `ACCEPTED` |
 | Live E2E coverage | `[1, 1, 1, 1, 0, 0]`, zero blockers |
 | Live E2E transactions | `13 finalized`, all `MAJORITY_AGREE` |
+| Live E2E settlement | 1 GEN credited and withdrawn; zero residual credits |
+| Independent on-chain reverification | `passed` |
+| CertaForge hosted GitHub Actions | unavailable before step execution; not green CI |
 
 ## Coverage
 
@@ -40,7 +43,14 @@ The automated suite verifies:
 ```sh
 pytest -q
 genvm-lint contracts/certaforge.py
+npm install
+npm run verify:e2e
 ```
+
+The Python suite and GenVM lint are local deterministic gates. The E2E verifier
+is a read-only network gate that independently re-fetches all 13 finalized
+Studionet transactions, compares their execution hashes, reads release `1`, and
+checks its certificate and zero post-withdraw credit balances.
 
 The on-chain source-equivalence result is independently recorded in
 `artifacts/deployment.studionet.json`. A later source change invalidates the
@@ -50,3 +60,12 @@ documents may describe the changed source as deployed.
 The detailed funded lifecycle and every explorer-linked transaction are in
 `docs/E2E.md`; the complete machine-readable record is in
 `artifacts/live-e2e.studionet.json`.
+
+## Hosted CI limitation
+
+The repository includes `.github/workflows/ci.yml`, but GitHub currently fails
+its hosted jobs before any workflow step begins. The affected jobs expose zero
+steps and no log. Accordingly, this documentation does not claim a passing
+CertaForge GitHub Actions run. The green public GitHub checks sealed by the live
+E2E belong to the explicitly identified evidence target in `docs/E2E.md`; they
+are separate from CertaForge's 60-test local result.

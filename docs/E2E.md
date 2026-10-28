@@ -73,12 +73,13 @@ accepted release credited exactly 1 GEN, withdrawal cleared that credit, and the
 signer's before/after native balance was conserved at 3 GEN because the escrow
 principal was returned after acceptance.
 
-## GitHub check context
+## GitHub check and hosted-CI context
 
-The CertaForge repository's new `tests` workflow was also triggered for the
-runner commit, but GitHub failed the job before executing any step. The job has
-zero steps and no log, which indicates account-level Actions unavailability, not
-a test failure. Because CertaForge correctly rejects any commit carrying a failed
+The CertaForge repository's `tests` workflow is configured on pushes, but the
+observed hosted jobs have been failed by GitHub before executing any step. Those
+jobs contain zero steps and no log, which indicates account-level Actions
+unavailability, not a test execution. This status is neither hidden nor described
+as green CI. Because CertaForge correctly rejects any commit carrying a failed
 check run, the live lifecycle did not weaken or bypass that invariant.
 
 Instead, the evidence target was the public `actions/checkout` commit above,
@@ -96,3 +97,8 @@ release state directly from Studionet with:
 npm install
 npm run verify:e2e
 ```
+
+The independent verifier checks the committed deployment identity and source
+hash, re-fetches all 13 transactions, matches every live execution hash, reads
+release `1` directly from the contract, confirms its `ACCEPTED` terminal state,
+and confirms both post-withdraw credit balances remain zero.

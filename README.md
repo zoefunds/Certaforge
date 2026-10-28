@@ -21,7 +21,11 @@ whose contract class is `CertaForge`.
 | Transaction status | `FINALIZED` |
 | Source SHA-256 | `aa1255c639da0939bdcabaaf8c6030017f5891111ab57e072e959bf9eb3a0981` |
 | Source equivalence | Local and deployed source hashes match |
-| Latest verification | 60 tests passed; GenVM lint passed; live funded E2E accepted |
+| Live verified release | `1` — `ACCEPTED` |
+| Live E2E escrow | 1 GEN, settled and withdrawn |
+| Live E2E coverage | `[1, 1, 1, 1, 0, 0]`, zero blockers |
+| Live E2E transactions | 13 finalized, all `MAJORITY_AGREE` |
+| Local verification | 60 tests passed; GenVM lint passed (3 checks) |
 
 - [View the deployment transaction](https://explorer-studio.genlayer.com/tx/0xb03e901899283a0963fcaf77f05503780bc719b20a9fee6671b6b3e0264f4e05)
 - [Deployment procedure and evidence](docs/DEPLOYMENT.md)
@@ -58,6 +62,16 @@ The suite covers the release lifecycle, escrow accounting, source sealing,
 inventory and blob verification, deterministic import resolution, complete
 obligation coverage, challenges, refunds, and project identity controls.
 
+Independently re-fetch the committed live lifecycle from Studionet:
+
+```sh
+npm install
+npm run verify:e2e
+```
+
+This verifies all 13 transaction execution hashes, the live terminal release,
+certificate coverage and blockers, and the post-withdraw contract balances.
+
 ## Deployment
 
 Install the Node dependency declared in `package.json`, provide the funded
@@ -71,6 +85,15 @@ CERTAFORGE_DEPLOYER_KEY=<private-key> npm run deploy:studionet
 Never commit a private key or `.env` file. The deployment tool waits for
 finalization, requires majority consensus, compares the deployed contract bytes
 with the local source, and writes `artifacts/deployment.studionet.json`.
+
+## Hosted CI status
+
+The GitHub Actions workflow is present, but the repository's hosted jobs are
+currently being failed by GitHub before any step starts; affected jobs contain
+zero steps and no job log. This is an account-level Actions availability issue,
+not a passing hosted check and not a test execution. The verified local result
+and funded Studionet result above are recorded separately and must not be
+misrepresented as a green CertaForge Actions run.
 
 ## Repository layout
 
